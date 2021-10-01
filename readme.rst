@@ -1,3 +1,4 @@
+=======================================
 Grokking Algorithms / Грокаем Алгоритмы
 =======================================
 
@@ -5,11 +6,13 @@ This repository contains the examples and algorithms written in Python for the b
 
 Этот репозиторий содержит примеры кода и алгоритмы на языке Python из книги "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
 
+*************
 .. Contents::
+*************
 
-*. Binary Search.
-*. Selection sort.
-*. Countdown using recursion.
+* Binary Search.
+* Selection sort.
+* Countdown using recursion.
 * Printing greetings.
 * Factorial using recursion.
 * Sum of elements using recursion.
@@ -22,8 +25,9 @@ This repository contains the examples and algorithms written in Python for the b
 * Dijkstra's algorithm using hash tables (dictionaries).
 * Greedy algorithm using sets and hash tables (dictionaries).
 
-
+***************
 .. Содержание::
+***************
 
 * Бинарный поиск.
 * Сортировка выбором.
