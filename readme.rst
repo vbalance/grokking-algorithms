@@ -1,6 +1,6 @@
-===================
+###################
 Grokking Algorithms
-===================
+###################
 
 This repository contains my own code examples and algorithms written in Python for the book "Grokking Algorithms" by Aditya Bhargava with English and Russian comments.
 
@@ -24,9 +24,9 @@ Contents
 #. Greedy algorithm using sets and hash tables (dictionaries).
 
 
-=================
+#################
 Грокаем Алгоритмы
-=================
+#################
 
 Этот репозиторий содержит мои собственные примеры кода и алгоритмы на языке Python к книге "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
 
