@@ -7,9 +7,9 @@ This repository contains the examples and algorithms written in Python for the b
 
 .. Contents::
 
-* Binary Search.
-* Selection sort.
-* Countdown using recursion.
+*. Binary Search.
+*. Selection sort.
+*. Countdown using recursion.
 * Printing greetings.
 * Factorial using recursion.
 * Sum of elements using recursion.
