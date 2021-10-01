@@ -2,20 +2,20 @@
 Grokking Algorithms / Грокаем Алгоритмы
 =======================================
 
-This repository contains the examples and algorithms written in Python for the book "Grokking Algorithms" by Aditya Bhargava with Russian and English comments.
+This repository contains my code examples and algorithms written in Python for the book "Grokking Algorithms" by Aditya Bhargava with Russian and English comments.
 
-Этот репозиторий содержит примеры кода и алгоритмы на языке Python из книги "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
+Этот репозиторий содержит мои примеры кода и алгоритмы на языке Python к книге "Грокаем Алгоритмы" Адитья Бхаргава с английскими и русскими комментариями.
 
 ********
 Contents
 ********
 
-* Binary Search.
-* Selection sort.
-* Countdown using recursion.
-* Printing greetings.
-* Factorial using recursion.
-* Sum of elements using recursion.
+# Binary Search.
+# Selection sort.
+# Countdown using recursion.
+# Printing greetings.
+# Factorial using recursion.
+# Sum of elements using recursion.
 * Counting elements using recursion.
 * Finding the greatest element using recursion.
 * Binary search using recursion.
