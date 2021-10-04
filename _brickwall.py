@@ -1,10 +1,18 @@
-import random, pprint
+"""
+The decision for "brickwall" task with graphics display.
+"""
+import random
+import pprint
 from PIL import Image, ImageDraw, ImageFont
 
 
 def brickwall_draw(brickwall, result):
-    (min_cross, positions) = result
-    print(f'Min cross = {min_cross}, positions = {positions}')
+    """
+    draw our brickwall with redlines and numerical scale, parameters:
+    brickwall (list),
+    results (number of min intersections, positions list)
+    """
+    (_, positions) = result
 
     # set parameters
     margin = 10
@@ -21,8 +29,8 @@ def brickwall_draw(brickwall, result):
     canvas_height = wall_height * scale + 2 * margin + indent
     # print(f'canvas_width = {canvas_width}, canvas_height = {canvas_height}')
 
-    im = Image.new('RGB', (canvas_width, canvas_height), (20, 20, 20))
-    draw = ImageDraw.Draw(im)
+    img = Image.new('RGB', (canvas_width, canvas_height), (20, 20, 20))
+    draw = ImageDraw.Draw(img)
 
     # draw brickwall
     for i in range(wall_height):
@@ -58,19 +66,26 @@ def brickwall_draw(brickwall, result):
         text = str(i)
         draw.text((25+i*scale, canvas_height-indent), text, font = font, align ="left")
 
-    im.show()
+    img.show()
 
 
-def brickrow_width(row):
+def brickrow_width(row: list):
+    """docstring"""
     width = 0
     for i in row:
         width += i
     return width
 
 
-def generate_brickwall(width: int, height: int, max_brick_size: int):
+def generate_brickwall(width: int, height: int, max_brick_size: int) -> list:
+    """
+    Generate brickwall with parametres:
+        width of wall: 1st parameter,
+        height of wall: 2nd parameter,
+        width of brick: random range from 1 to 3rd parameter
+    """
     wall = []
-    for i in range(height):
+    for _ in range(height):
         row = []
         total_width = 0
         while brickrow_width(row) < width:
@@ -83,7 +98,8 @@ def generate_brickwall(width: int, height: int, max_brick_size: int):
     return wall
 
 
-def min_quantity_brick_cross(brickwall):
+def min_quantity_brick_cross(brickwall: list):
+    """docstring"""
     height = len(brickwall)
     brickwall_width = brickrow_width(brickwall[0])
     wall_map = [0] * (brickwall_width-1)
@@ -99,27 +115,19 @@ def min_quantity_brick_cross(brickwall):
     print(wall_map)
 
     max_cross = 0
-    for x in wall_map:
-        if x > max_cross:
-            max_cross = x
+    for i in wall_map:
+        if i > max_cross:
+            max_cross = i
 
     positions = [i for i, x in enumerate(wall_map) if x == max_cross]
     result = height - max_cross
     return (result, positions)
 
 
-'''
-generate brickwall with parametres:
-    width of wall: 1st parameter,
-    height of wall: 2nd parameter,
-    width of brick: random range from 1 to 3rd parameter
-'''
-brickwall = generate_brickwall(40, 20, 4)
-result = min_quantity_brick_cross(brickwall)
+generated_brickwall = generate_brickwall(40, 20, 4)
+pprint.pprint(generated_brickwall)
 
-'''
-draw our brickwall with redlines and numerical scale, parameters:
-    brickwall (list),
-    results (number of min intersections, positions list)
-'''
-brickwall_draw(brickwall, result)
+crosses_and_positions = min_quantity_brick_cross(generated_brickwall)
+print(f'Min crosses = {crosses_and_positions[0]}, in positions: {crosses_and_positions[1]}')
+
+brickwall_draw(generated_brickwall, crosses_and_positions)
