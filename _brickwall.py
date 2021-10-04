@@ -108,12 +108,18 @@ def min_quantity_brick_cross(brickwall):
     return (result, positions)
 
 
-# generate brickwall with parametres:
-# width of wall: 1st parameter
-# height of wall: 2nd parameter
-# width of brick: random range from 1 to 3rd parameter
+'''
+generate brickwall with parametres:
+    width of wall: 1st parameter,
+    height of wall: 2nd parameter,
+    width of brick: random range from 1 to 3rd parameter
+'''
 brickwall = generate_brickwall(40, 20, 4)
-# pprint.pprint(brickwall)
-
 result = min_quantity_brick_cross(brickwall)
+
+'''
+draw our brickwall with redlines and numerical scale, parameters:
+    brickwall (list),
+    results (number of min intersections, positions list)
+'''
 brickwall_draw(brickwall, result)
