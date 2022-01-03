@@ -2,6 +2,8 @@
 Grokking Algorithms
 ###################
 
+Version 1
+
 This repository contains my own code examples and algorithms written in Python for the book "Grokking Algorithms" by Aditya Bhargava with English and Russian comments.
 
 ********
